@@ -15,14 +15,9 @@
   }
 }
 
-.App-header {
+.App {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -37,23 +32,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.nav-link {
-  background-color: transparent !important;
-  color: $success !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 2px solid lighten($success, 10%) !important;
-  
-}
-.nav-link.active{
-  background-color: $success !important;
-  color: $white !important;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 2px solid $success !important;
-  border-radius: 0px;
 }
