@@ -1,4 +1,4 @@
-import { Row, Col, Nav, Dropdown, NavItem, NavLink, Image, Figure } from "react-bootstrap";
+import { Row, Col, Nav, Dropdown, NavItem, NavLink, Image } from "react-bootstrap";
 import "./App.scss";
 import Tab from 'react-bootstrap/Tab';
 import logo from "./buddyAiLogo2.svg"
@@ -6,25 +6,26 @@ import Home from "./Tabs/Home/Home";
 import { useState } from "react";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<string>("Profile")
+  const [selectedPage, setSelectedPage] = useState<string>("Account")
+  const defaultPageName: string = "Account"
   return (
     <div className="App">
       <Tab.Container id="left-tabs-example" defaultActiveKey="logo">
         <Row>
           <Col sm={12}>
             <Nav fill variant="pills" className="flex-row">
-              <Nav.Item >
-                <Nav.Link className="colored-tab" eventKey="logo">
+              <Nav.Item className="link-logo">
+                <Nav.Link onClick={() => setSelectedPage(defaultPageName)} className="link-logo" eventKey="logo">
                   <Image height={20} src={logo} />
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                <Nav.Link onClick={() => setSelectedPage(defaultPageName)} eventKey="first">Tab 1</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                <Nav.Link onClick={() => setSelectedPage(defaultPageName)} eventKey="second">Tab 2</Nav.Link>
               </Nav.Item>
-              <Dropdown as={NavItem}>
+              <Dropdown drop="down-centered" as={NavItem}>
                 <Dropdown.Toggle as={NavLink}>{selectedPage}</Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item>
@@ -34,7 +35,7 @@ function App() {
                   </Dropdown.Item>
                   <Dropdown.Item>
                     <Nav.Item>
-                      <Nav.Link onClick={() => setSelectedPage("Favourites")} eventKey="favourite">Favourites</Nav.Link>
+                      <Nav.Link onClick={() => setSelectedPage("Favourites")} eventKey="favourite"><span className="bi bi-heart-fill"> Favourites</span></Nav.Link>
                     </Nav.Item>
                   </Dropdown.Item>
                   <Dropdown.Divider />
