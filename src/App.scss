@@ -38,3 +38,22 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-link {
+  background-color: transparent !important;
+  color: $success !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid lighten($success, 10%) !important;
+  
+}
+.nav-link.active{
+  background-color: $success !important;
+  color: $white !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid $success !important;
+  border-radius: 0px;
+}
