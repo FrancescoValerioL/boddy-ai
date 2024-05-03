@@ -4,6 +4,7 @@ import Tab from 'react-bootstrap/Tab';
 import logo from "./buddyAiLogo2.svg"
 import Home from "./Tabs/Home/Home";
 import { useState } from "react";
+import CreateBuddyBot from "./Tabs/CreateBuddyBot/CreateBuddyBot";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<string>("Account")
@@ -24,6 +25,9 @@ function App() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link onClick={() => setSelectedPage(defaultPageName)} eventKey="second">Tab 2</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link onClick={() => setSelectedPage(defaultPageName)} eventKey="create">Create Buddy Bot</Nav.Link>
               </Nav.Item>
               <Dropdown drop="down-centered" as={NavItem}>
                 <Dropdown.Toggle as={NavLink}>{selectedPage}</Dropdown.Toggle>
@@ -54,6 +58,7 @@ function App() {
               <Tab.Pane eventKey="first">First tab content</Tab.Pane>
               <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
               <Tab.Pane eventKey="profile"><Home /></Tab.Pane>
+              <Tab.Pane eventKey="create"><CreateBuddyBot /></Tab.Pane>
             </Tab.Content>
           </Col>
         </Row>

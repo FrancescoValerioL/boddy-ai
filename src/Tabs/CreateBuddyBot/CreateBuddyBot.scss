@@ -1,0 +1,38 @@
+@import "../../custom";
+.container-fluid{
+    padding-top: 10px;
+    background-color: transparent;
+    text-align: start;
+}
+
+.form-text {
+    color: $light;
+    background-color: $dark;
+}
+.form-text:focus {
+    color: $light;
+    background-color: $dark;
+}
+
+label::after {
+    color: $light;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+}
+.form-floating > .form-select ~ label {
+    color: $light;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+}
+
+.form-floating > .form-control:focus ~ label {
+    color: $light;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+}
+
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: $light;
+    background-color: transparent !important;
+    border-radius: 0px !important;
+}
