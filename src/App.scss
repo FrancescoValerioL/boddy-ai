@@ -1,4 +1,4 @@
-@import "custom";
+@import "./custom.scss";
 
 .App {
   text-align: center;
@@ -10,19 +10,15 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .link-logo {
   max-width: 200px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 25px;
 }
