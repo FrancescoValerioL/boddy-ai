@@ -16,7 +16,7 @@ const CreateBuddyBot = () => {
     });
   };
   return (
-    <Container>
+    <Container className="row-create">
       <Form>
         <Row className="g-2">
           <Col md>
