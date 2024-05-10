@@ -2,9 +2,9 @@ import { Row, Col, Nav, Dropdown, NavItem, NavLink, Image } from "react-bootstra
 import "./App.scss";
 import Tab from "react-bootstrap/Tab";
 import logo from "./buddyAiLogo2.svg";
-import Home from "./Tabs/Home/Home";
+import Home from "./tabs/Home/Home";
 import { useState } from "react";
-import CreateBuddyBot from "./Tabs/CreateBuddyBot/CreateBuddyBot";
+import CreateBuddyBot from "./tabs/CreateBuddyBot/CreateBuddyBot";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<string>("Account");
@@ -18,16 +18,6 @@ function App() {
               <Nav.Item className="link-logo">
                 <Nav.Link onClick={() => setSelectedPage(defaultPageName)} className="link-logo" eventKey="logo">
                   <Image height={20} src={logo} />
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link onClick={() => setSelectedPage(defaultPageName)} eventKey="browse">
-                  Browse
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link onClick={() => setSelectedPage(defaultPageName)} eventKey="second">
-                  Tab 2
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -52,12 +42,6 @@ function App() {
                       </Nav.Link>
                     </Nav.Item>
                   </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="logout">LogOut</Nav.Link>
-                    </Nav.Item>
-                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>
@@ -67,8 +51,6 @@ function App() {
               <Tab.Pane eventKey="logo">
                 <Home />
               </Tab.Pane>
-              <Tab.Pane eventKey="browse">Browse Buddy Bots</Tab.Pane>
-              <Tab.Pane eventKey="second">Second tab content</Tab.Pane>
               <Tab.Pane eventKey="profile">
                 <Home />
               </Tab.Pane>
