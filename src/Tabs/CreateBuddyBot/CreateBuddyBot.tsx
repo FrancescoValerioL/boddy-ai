@@ -43,6 +43,11 @@ const CreateBuddyBot = () => {
     localStorage.setItem("bots", JSON.stringify(initialValue));
     console.log(initialValue);
     setShow(true);
+    setTimeout(reload, 3000);
+  };
+
+  const reload = () => {
+    window.location.reload();
   };
   return (
     <Container className="row-create">
