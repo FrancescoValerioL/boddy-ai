@@ -78,6 +78,30 @@ const CreateBuddyBot = () => {
         </Row>
         <Row className="g-2">
           <Col md>
+            <FloatingLabel controlId="floatingInputGrid" label="Description">
+              <Form.Control
+                onChange={handleDescriptio}
+                className="form-text"
+                style={{ height: "100px" }}
+                as="textarea"
+                placeholder="Text"
+              />
+            </FloatingLabel>
+          </Col>
+          <Col md>
+            <FloatingLabel controlId="floatingInputGrid" label="Initial Message">
+              <Form.Control
+                onChange={handleName}
+                className="form-text"
+                style={{ height: "100px" }}
+                as="textarea"
+                placeholder="name@example.com"
+              />
+            </FloatingLabel>
+          </Col>
+        </Row>
+        <Row className="g-2">
+          <Col md>
             <FloatingLabel controlId="floatingInputGrid" label="Identity">
               <Form.Control
                 onChange={handleName}
@@ -102,23 +126,13 @@ const CreateBuddyBot = () => {
             </FloatingLabel>
           </Col>
         </Row>
-        <Row className="g-2">
-          <Col md>
-            <FloatingLabel controlId="floatingInputGrid" label="Initial Message">
-              <Form.Control
-                onChange={handleName}
-                className="form-text"
-                style={{ height: "100px" }}
-                as="textarea"
-                placeholder="name@example.com"
-              />
-            </FloatingLabel>
-          </Col>
+        <Row className="centered">
+          <Col sm={3}>Help</Col>
         </Row>
         <Row className="centered">
-          <Col sm={1}>
+          <Col sm={3}>
             <Button variant="secondary" onClick={handleForm}>
-              Create
+              Create Buddy Bot
             </Button>
           </Col>
         </Row>
