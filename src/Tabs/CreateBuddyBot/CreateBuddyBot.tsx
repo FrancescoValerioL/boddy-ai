@@ -11,7 +11,19 @@ const CreateBuddyBot = () => {
   const [description, setDescription] = useState<string>("");
   const [show, setShow] = useState(false);
   const levels: string[] = ["A1", "A2", "B1", "B2", "C1", "C2"];
-  const languages: string[] = ["Italian", "English", "Korean"];
+  const languages: string[] = [
+    "Italian",
+    "English",
+    "Korean",
+    "Arabic",
+    "Chinese",
+    "German",
+    "French",
+    "Japanese",
+    "Portugeuse",
+    "Russian",
+    "Spanish",
+  ];
 
   const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -36,7 +48,7 @@ const CreateBuddyBot = () => {
       name: name,
       language: language,
       level: level,
-      description: "",
+      description: description,
     };
     initialValue ? initialValue.push(newBot) : (initialValue = [newBot]);
 
@@ -61,7 +73,7 @@ const CreateBuddyBot = () => {
           <Col md>
             <FloatingLabel className="form-text-label" controlId="floatingSelectGrid" label="Language">
               <Form.Select onChange={handleLanguage} defaultValue={1} aria-label="Language" className="form-text">
-                {languages.map((language, key) => (
+                {languages.sort().map((language, key) => (
                   <option value={language} key={key}>
                     {language}
                   </option>
